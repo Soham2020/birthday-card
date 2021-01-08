@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Birthday-Card 💑</title>
 </head>
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif;">
     <header>
         <img src="birthday.gif" alt="birthday">
         <h1><b>Birthday Card Generator</b></h1>
+        <iframe src="" id="mypdf" height="500px" width="500px" frameborder="0"></iframe>
     </header>
     <main>
         <label for="name">Type your name</label>
@@ -22,9 +23,13 @@
     </main>
     <footer>
         <div class="footer">
-            <h3 style="font-family: Arial, Helvetica, sans-serif;">Made with <i class="fa fa-heart" style="color:red;"></i> by Soham Das😙</h3>
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Made with <i class="fa fa-heart" style="color:red;"></i> by <a href="https://sohamdas02.netlify.app/">Soham Das</a>😙</h3>
         </div>
     </footer>
     <!-- link to js -->
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <!-- <script src="./FileSaver.js"></script> -->
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
