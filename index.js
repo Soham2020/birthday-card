@@ -22,7 +22,7 @@ const generatePDF = async(name) => {
         color: rgb(1,0.6,1)
     })
     const uri = await pdfDoc.saveAsBase64({dataUri: true})
-    window.open(uri)
-    document.querySelector("#mypdf").src = uri;
+    // window.open(uri)
+    // document.querySelector("#mypdf").src = uri;
 }
 generatePDF("Soham Das")
