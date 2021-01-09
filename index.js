@@ -16,13 +16,22 @@ const generatePDF = async(name) => {
     const pages = pdfDoc.getPages();
     const firstPg = pages[0];
     firstPg.drawText(name, {
-        x: 310,
+        x: 330,
         y: 300,
         size: 54,
         color: rgb(1,0.6,1)
     })
     const uri = await pdfDoc.saveAsBase64({dataUri: true})
+    saveAs(uri, "bdaycert.pdf", { autoBom: true })
     // window.open(uri)
     // document.querySelector("#mypdf").src = uri;
-}
-generatePDF("Soham Das")
+};
+
+const submitBtn = document.getElementById("submitbtn")
+const inputVal = document.querySelector("#name")
+
+submitBtn.addEventListener("click", () => {
+    const val = inputVal.value
+    generatePDF(val)
+})
+
